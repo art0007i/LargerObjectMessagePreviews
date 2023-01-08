@@ -2,7 +2,7 @@
 
 ![what the mod does](https://cdn.discordapp.com/attachments/1060420748486905906/1060420748654694420/Neos_h6PvTyY1zg.png)
 
-A [NeosModLoader](https://github.com/zkxs/NeosModLoader) mod for [Neos VR](https://neos.com/) that does increases the size of object message thumbnails.
+A [NeosModLoader](https://github.com/zkxs/NeosModLoader) mod for [Neos VR](https://neos.com/) that increases the size of object message thumbnails.
 
 - fun fact: this mod was made entirely in VR
 
