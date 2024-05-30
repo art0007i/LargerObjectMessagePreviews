@@ -1,6 +1,6 @@
 # LargerObjectMessagePreviews
 
-![what the mod does](https://cdn.discordapp.com/attachments/1060420748486905906/1060420748654694420/Neos_h6PvTyY1zg.png)
+![what the mod does](https://github.com/art0007i/LargerObjectMessagePreviews/assets/19620451/00e76794-da71-407a-ac07-5588d63761a1)
 
 A [ResoniteModLoader](https://github.com/resonite-modding-group/ResoniteModLoader) mod for [Resonite](https://resonite.com/) that increases the size of object message thumbnails.
 
