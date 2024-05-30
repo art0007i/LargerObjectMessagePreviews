@@ -1,5 +1,5 @@
 using HarmonyLib;
-using NeosModLoader;
+using ResoniteModLoader;
 using System;
 using System.Linq;
 using System.Reflection;
@@ -10,7 +10,7 @@ using System.Reflection.Emit;
 
 namespace LargerObjectMessagePreviews
 {
-    public class LargerObjectMessagePreviews : NeosMod
+    public class LargerObjectMessagePreviews : ResoniteMod
     {
         public override string Name => "LargerObjectMessagePreviews";
         public override string Author => "art0007i";
@@ -22,16 +22,18 @@ namespace LargerObjectMessagePreviews
             harmony.PatchAll();
 
         }
-        [HarmonyPatch(typeof(FriendsDialog), "AddMessage")]
+        [HarmonyPatch(typeof(ContactsDialog), "AddMessage")]
         class LargerObjectMessagePreviewsPatch
         {
             public static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> codes)
             {
+                var found = false;
                 foreach (var code in codes)
                 {
-                    if(code.Is(OpCodes.Ldc_I4_S, 64))
+                    if(!found && code.Is(OpCodes.Ldc_R4, 64.0f))
                     {
-                        yield return new CodeInstruction(OpCodes.Ldc_I4, 256);
+                        found = true;
+                        yield return new CodeInstruction(OpCodes.Ldc_R4, 256.0f);
                     }
                     else
                     {
